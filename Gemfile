@@ -4,8 +4,11 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails'
 end
 gem 'jquery-rails'
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem "thin", ">= 1.5.0", :group => :production
 gem "mongoid", ">= 3.1.0"
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
