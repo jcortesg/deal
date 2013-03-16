@@ -1,0 +1,48 @@
+<%= form_for(@raffle) do |f| %>
+  <% if @raffle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@raffle.errors.count, "error") %> prohibited this raffle from being saved:</h2>
+
+      <ul>
+      <% @raffle.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fb_id %><br />
+    <%= f.text_field :fb_id %>
+  </div>
+  <div class="field">
+    <%= f.label :empresa %><br />
+    <%= f.text_field :empresa %>
+  </div>
+  <div class="field">
+    <%= f.label :tw %><br />
+    <%= f.text_field :tw %>
+  </div>
+  <div class="field">
+    <%= f.label :product %><br />
+    <%= f.text_field :product %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :conditions %><br />
+    <%= f.text_field :conditions %>
+  </div>
+  <div>
+    <%= f.text_field :datend %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
