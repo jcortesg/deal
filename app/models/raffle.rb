@@ -8,4 +8,5 @@ class Raffle
   field :description, type: String
   field :conditions, type: String
   field :datend, type: Date
+  field :main, type: Boolean, :default => false
 end

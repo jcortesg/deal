@@ -1,8 +1,87 @@
+<div class="row">
+	<div class="span12">
+		<div class="row">
+			<% @raffles.each do |raffle| %>
+				<%if raffle.main %>
+				<% @datend = raffle.datend %>
+				<div class="main deal">
+					<div class="span7">
+						<%= link_to  image_tag(raffle.product) , raffle %>
+					</div>
+					<div class="span4">
+						<h1> <%=raffle.name %></h1>
+						<%= raffle.description.first(300)+"..." %>
+
+						<div class="crono">
+							<label>Se Sorteara en</label>
+							 <ul id="countdown">
+				                <li>
+				                  <span class="days">12</span>
+				                  <small>Dias</small>
+				                  
+				                </li>
+				                <li>
+				                  <span class="hours">12</span>
+				                  <small>Horas</small>
+				                </li>
+				                <li>
+				                  <span class="minutes">12</span>
+				                  <small>Min</small>
+				                </li>
+				                <li>
+				                  <span class="seconds">12</span>
+				                  <small>Seg</small>
+				                </li>
+				              </ul>
+						</div>
+					</div>
+					
+	
+
+						<%= link_to "Participa", raffle,:class =>"btn  btn-large btn-success ln" %>
+				</div>
+				<% end -%>
+			<% end -%>
+			<% @raffles.each do |raffle| %>
+				<%if raffle.main %>
+				<%else%>
+					<div class="span3">
+						<div class="unit">
+							<div class="intt">
+								<%= link_to  image_tag(raffle.product) , raffle %>
+								
+								
+									<span><b><%=raffle.name.first(50) %></b></span>
+								
+									<small class= "label label-success">
+										Se Sorteara el <%=raffle.datend%>
+									</small>
+								</div>
+							
+						</div>
+					</div>
+					
+				<% end -%> 
+			<% end %>
+
+		</div>	
+	</div>
+
+</div>
+
+<!-- Scrip -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    
+      $("#countdown").countdown({
+        date: '<%= @datend %>' , // add the countdown's end date (i.e. 3 november 2012 12:00:00)
+        format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
+      },
+      function() { 
+        alert("done!") 
+      });
+    });
+  </script>
 
 
-<% @raffles.each do |raffle| %>
-  <img src="  <%= raffle.product %>">
-  <p>User: <%=raffle.name %></p>
-
-
-<% end %>

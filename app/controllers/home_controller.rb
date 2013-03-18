@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-     @raffles = Raffle.all
+    @raffles = Raffle.all
   end
 end

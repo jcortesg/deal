@@ -10,19 +10,25 @@
     <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <div id="container" class="container">
-      <header>
-        <%= render 'layouts/navigation' %>
+     <%= render 'layouts/navigation' %>
+    <div id="container" class="container">     
         <%= render 'layouts/messages' %>
-      </header>
       <div id="main" role="main">
         <div class="container">
            <%= yield %>
         </div>
        
       </div>
-      <footer>
-      </footer>
+      
     </div> <!--! end of #container -->
+    <footer>
+        <div class="container">
+          © 2013 Gritalo.co,  Todos los derechos reservados.
+        </div>
+    </footer>
+
+
+
   </body>
+
 </html>

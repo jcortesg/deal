@@ -3,5 +3,123 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-  background:  #89b556 url(images/bg.svg) center 68px no-repeat;
+  background: #f0f0f0;
+	}
+header{
+	height: 75px;
+	background: #343434;
+	margin-bottom: 18px;
+	border-bottom: 3px solid #c4ccda;
+
+	.nav{
+		display: inline-block;
+		right: 0;
+		font-weight: bold;
+		color: #c4ccda;
+		}
+		ul{
+			float: right;
+			margin-top: 25px;
+		}
+		a{
+			color: #c4ccda;
+			text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+			margin: 5px;
+			&:hover{
+				color: #c4ccda;
+				text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+			}
+
+		}
+}
+.deal{
+	background: #fff;
+	display: inline-block;
+	border: 1px solid #e1e1e1;
+	width: 100%;
+	-moz-box-shadow: inset 0 0 20px #d1d1d1;;
+	-webkit-box-shadow: inset 0 0 20px#d1d1d1;
+	box-shadow: inner 0 0 20px #d1d1d1;
+	}
+.logo{
+	width: 120px;
+	float: left;
+}
+.main{
+	margin: 5px 0px 60px;
+	border-bottom: 5px solid #0fa744;
+	padding: 20px 0px 20px 10px;	
+		ul{
+			width:100%;
+			display: inline-block;
+			text-align: center;
+			margin: 14px 0 10px 0px;
+			li{
+				list-style: none;
+				display: inline-block;
+				margin: 16px 5px ;
+
+				span{
+					padding: 10px;
+					font-size: 25px;
+					color: #fff;
+					background: #000;
+					border-radius: 5px;
+					border: 2px solid #d1d1d1;
+				}
+				small{
+					display: block;
+					font-size: 11px;
+					line-height: 18px;
+					border-radius: 4px;
+					padding: 5px 5px 0;
+					color: #000;
+					text-shadow:  0 1px 0 #d1d1d1;
+					margin-top: 4px;
+				}
+			}
+		
+		}
+		.ln{
+			float: right;
+			margin-right: -20px;		
+		}
+	}
+.unit{
+	height: 290px;
+	margin-bottom:40px;
+	button{
+				float: right;
+				margin: -10px;
+				position: relative;
+			}
+		.intt{
+			margin: 10px;
+			background: #fff;
+			border: 1px solid #e1e1e1;
+
+			img{
+				width: 100%; 
+				height: 180px;
+			}
+			.info{
+				padding: 5px;
+			}
+	span{
+		padding: 4px;
+	}
+	small{
+		display: block;
+		padding: 4px;
+	}
+		}
+	}
+
+footer{
+	background: #343434;
+	width: 100%;
+	padding: 10px;
+	color: #c4ccda;
+	bottom: 0;
+	padding: 20px 0px;
 }

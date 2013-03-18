@@ -1,3 +1,75 @@
+
+
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="main deal">
+    <div class="span7">
+      <%= image_tag @raffle.product %>
+    </div>
+    <div class="span4">
+      <h2><%= @raffle.name %></h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+      </p>
+      <div class="crono">
+
+              <ul id="countdown">
+                <label>Se Sorteara en</label>
+                <li>
+                  <span class="days">12</span>
+                  <small>Dias</small>
+                  
+                </li>
+                <li>
+                  <span class="hours">12</span>
+                  <small>Horas</small>
+                </li>
+                <li>
+                  <span class="minutes">12</span>
+                  <small>Min</small>
+                </li>
+                <li>
+                  <span class="seconds">12</span>
+                  <small>Seg</small>
+                </li>
+              </ul>
+            </div>
+    
+    </div>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=<%=raffle_path(@raffle)%>"
+        scrolling="no" frameborder="0"
+        style="border:none; width:450px; height:80px">
+    </iframe>
+      <%= link_to "Participa",root_path,:class =>"btn  btn-large btn-success ln" %>
+  </div>
+</div>
+
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#home">Description</a></li>
+  <li><a href="#profile">Condiciones</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div class="tab-pane active" id="home">
+    <%= @raffle.description %>
+  </div>
+  <div class="tab-pane" id="profile">...2</div>
+
+</div>
+ 
+<script>
+ $('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+})
+</script>
+
+
+
+<%= link_to 'Edit', edit_raffle_path(@raffle) %> |
+<%= link_to 'Back', raffles_path %>
+
+
 <script type="text/javascript">
     $(document).ready(function() {
     
@@ -5,77 +77,8 @@
         date: '<%= @raffle.datend %>' , // add the countdown's end date (i.e. 3 november 2012 12:00:00)
         format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
       },
-      
       function() { 
-        
-        // the code here will run when the countdown ends
         alert("done!") 
-
       });
     });
   </script>
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <%= image_tag @raffle.product %> <br>
-  <b>fechaEnd:</b>
-  <%=  @raffle.datend %><br>
-  <b>Fb:</b>
-  <%= @raffle.fb_id %>
-</p>
-
-<p>
-  <b>Empresa:</b>
-  <%= @raffle.empresa %>
-</p>
-
-<p>
-  <b>Tw:</b>
-  <%= @raffle.tw %>
-</p>
-
-<p>
-
-  
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @raffle.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @raffle.description %>
-</p>
-
-<p>
-  <b>Conditions:</b>
-  <%= @raffle.conditions %>
-</p>
-
-
-<%= link_to 'Edit', edit_raffle_path(@raffle) %> |
-<%= link_to 'Back', raffles_path %>
-
-
-====== <br>
-
-<ul id="countdown">
-    <li>
-      <span class="days">00</span>
-      <p class="timeRefDays">days</p>
-    </li>
-    <li>
-      <span class="hours">00</span>
-      <p class="timeRefHours">hours</p>
-    </li>
-    <li>
-      <span class="minutes">00</span>
-      <p class="timeRefMinutes">minutes</p>
-    </li>
-    <li>
-      <span class="seconds">00</span>
-      <p class="timeRefSeconds">seconds</p>
-    </li>
